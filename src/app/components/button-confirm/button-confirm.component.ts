@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-button-confirm',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonConfirmComponent implements OnInit {
 
+  @Input() text: string = '';
+  
   constructor() { }
 
   ngOnInit(): void {

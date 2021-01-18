@@ -12,4 +12,10 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scroll() {
+    const carousel = document.getElementsByClassName('carousel')[0];
+
+    var coord = carousel.getBoundingClientRect();
+    window.scrollTo({left: coord.x, top : (coord.y + 380),  behavior: 'smooth'});
+  }
 }

@@ -9,9 +9,21 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
-  declarations: [TextComponent, ButtonConfirmComponent, ButtonCancelComponent, ImageComponent, NotFoundComponent],
+  declarations: [
+    TextComponent,
+    ButtonConfirmComponent,
+    ButtonCancelComponent,
+    ImageComponent,
+    NotFoundComponent
+  ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    TextComponent,
+    ButtonCancelComponent,
+    ButtonConfirmComponent,
+    ImageComponent
   ]
 })
 export class ComponentsModule { }

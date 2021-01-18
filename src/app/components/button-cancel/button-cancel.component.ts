@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-button-cancel',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./button-cancel.component.scss']
 })
 export class ButtonCancelComponent implements OnInit {
-
+  @Input() text: string = '';
+  
   constructor() { }
 
   ngOnInit(): void {

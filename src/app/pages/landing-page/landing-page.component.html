@@ -1,1 +1,44 @@
-<p>landing-page works!</p>
+<header>
+   <app-image 
+      src='../../../assets/images/header.png'
+      width='335px'
+      height='150px'
+   ></app-image>
+</header>
+
+
+
+<app-image 
+   src='../../../assets/images/landing-page/landing.png'
+   width='750px'
+   height='500px'
+></app-image>
+
+<div class="arrow-click">
+   <img src='../../../assets/images/landing-page/arrow-down.png' width="100px" height="100px" (click)="scroll()">
+</div>
+
+
+
+<ngb-carousel class="carousel">
+   <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+         <img class="carousel-img" src="../../../assets/images/landing-page/tutorial-step1.png" >
+      </div>
+      <div class="carousel-caption">
+         <h3>First slide label</h3>
+         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+   </ng-template>
+
+   <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+         <img class="carousel-img" src="../../../assets/images/landing-page/tutorial-step2.png" >
+      </div>
+      <div class="carousel-caption">
+         <h3>Second slide label</h3>
+         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+   </ng-template>
+
+</ngb-carousel>
