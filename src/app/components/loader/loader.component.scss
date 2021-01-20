@@ -1,0 +1,21 @@
+.loader {
+   z-index: 999;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+// .bg-blur {
+//    background: #00000077;
+//    filter: blur(50px);
+//    z-index: 5;
+//    width: 100vw;
+//    height: 100vh;
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+// }

@@ -21,6 +21,7 @@ export class SelectNumberComponent implements OnInit {
   inputNameHasFocus: boolean = false;
   inputGiftHasFocus: boolean = false;
   showModal: boolean = true;
+  showLoader: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -76,6 +77,8 @@ export class SelectNumberComponent implements OnInit {
     
     this.numberToRegister.people_name = this.formSelectNumber.controls.name.value;
     this.numberToRegister.chosen_number = this.formSelectNumber.controls.number.value;
+
+    this.showLoader = true;
 
     this.numberService.selectNumber(this.numberToRegister).subscribe(
       result => {
@@ -157,14 +160,14 @@ export class SelectNumberComponent implements OnInit {
 
 
   showError(error: any) {
-    this.toastService.error((error.message || 'Unexpected Error'), 'Error', {
+    this.toastService.error((error.message || 'Unexpected Error'), 'Erro', {
       progressBar: true,
       progressAnimation: 'decreasing'
     })
   }
 
   showSuccess(message: string) {
-    this.toastService.success(message, 'Success', {
+    this.toastService.success(message, 'Sucesso', {
       progressBar: true,
       progressAnimation: 'decreasing'
     });

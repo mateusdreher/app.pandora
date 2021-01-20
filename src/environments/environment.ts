@@ -1,8 +1,8 @@
 export const environment = {
   production: false,
   api: {
-    uri: 'http://localhost',
-    port: 3030
+    uri: 'https://api-pandora-dd.herokuapp.com',
+    port: 47657
   }
   
 };
