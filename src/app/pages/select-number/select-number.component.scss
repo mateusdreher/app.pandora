@@ -1,0 +1,35 @@
+header {
+   padding: 2%;
+   margin-top: 1%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   
+}
+form {
+   margin-top: 5%;
+}
+.div-button {
+   margin-top: 5%;
+}
+label {
+   font-size: 1.3rem;
+   font-style: italic;
+   font-weight: bold;
+   color: #274f7d;
+}
+span {
+   font-weight: bold;
+   font-style: oblique;
+   font-size: 1.1rem;
+}
+
+.div-modal {
+   width: 200px;
+   height: 500px;
+   z-index: 10;
+   position: fixed;
+   top: 20%;
+   left: 20%;
+   border: 1px solid red;
+}

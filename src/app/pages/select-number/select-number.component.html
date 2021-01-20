@@ -1,1 +1,67 @@
-<p>select-number works!</p>
+<header>
+   <app-image 
+      src='../../../assets/images/header.png'
+      width='100px'
+      height='50px'
+   ></app-image>
+</header>
+
+<form *ngIf=ready [formGroup]="formSelectNumber" (ngSubmit)="registerNumber()">
+
+   <div class="row">
+
+      <div class="form-group col-sm-12 col-md-4 offset-md-2">
+         <label for="name">Nome</label>
+         <input 
+            type="text" 
+            class="form-control"
+            id="name"
+            formControlName="name"
+            placeholder="Digite seu nome"
+            (focus)="inputNameHasFocus = true"
+         > 
+         <span class="text-danger" *ngIf="(formSelectNumber.controls.name.value === '' && inputNameHasFocus)">Digite seu nome</span>
+      </div>
+
+      <div class="form-group col-sm-12 col-md-4">
+         <label for="number">Selecione um número</label>
+         <select class="form-control" formControlName="number">
+            <option 
+               *ngFor="let number of numbersToShow"
+               value={{number}}
+            >{{number}}</option>
+         </select>
+      </div>
+
+   </div>
+
+   
+   <div class="row">
+      <div class="form-group col-sm-12 col-md-4 offset-md-4">
+         <label for="number">Selecione um presente</label>
+         <select class="form-control" (change)="setShowSize($event)" formControlName="gift" (focus)="inputGiftHasFocus = true">
+            <option value="" selected disabled>Selecione</option>
+            <option value="diaper">Fralda</option>
+            <option value="diaperAndAny">Fralda + mimo</option>
+            <option value="any" *ngIf="nextGift === 'any'">Mimo</option>
+         </select>
+         <span class="text-danger" *ngIf="(formSelectNumber.controls.gift.value === '' && inputGiftHasFocus)">Selecione um presente</span>
+      </div>
+
+      <div class="form-group col-sm-12 col-md-4 offset-md-4" *ngIf="showSize">
+         <label for="number">Selecione o tamanho</label>
+         <select class="form-control" formControlName="size">
+            <option value="" selected disabled>Selecione</option>
+            <option value="p">P</option>
+            <option value="m">M</option>
+            <option value="g">G</option>
+         </select>
+      </div>
+   </div>
+
+   <div class="offset-md-5 div-button">
+      <app-button-confirm text="Registrar" type="submit"></app-button-confirm>
+   </div>
+
+   
+</form>

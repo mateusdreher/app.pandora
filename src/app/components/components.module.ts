@@ -5,6 +5,8 @@ import { ButtonConfirmComponent } from './button-confirm/button-confirm.componen
 import { ButtonCancelComponent } from './button-cancel/button-cancel.component';
 import { ImageComponent } from './image/image.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ModalComponent } from './modal/modal.component';
+import { NgbModal, NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -14,16 +16,19 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ButtonConfirmComponent,
     ButtonCancelComponent,
     ImageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ModalComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NgbModalModule
   ],
   exports: [
     TextComponent,
     ButtonCancelComponent,
     ButtonConfirmComponent,
-    ImageComponent
+    ImageComponent,
+    ModalComponent
   ]
 })
 export class ComponentsModule { }

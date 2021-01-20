@@ -1,3 +1,4 @@
+import { GoodLuckComponent } from './pages/good-luck/good-luck.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ViewNumbersComponent } from './pages/view-numbers/view-numbers.component';
 import { SelectNumberComponent } from './pages/select-number/select-number.component';
@@ -9,6 +10,7 @@ const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'number', component: SelectNumberComponent },
   { path: 'view-number', component: ViewNumbersComponent },
+  { path: 'good-luck', component: GoodLuckComponent },
   { path: '**', component: NotFoundComponent }
 ];
 

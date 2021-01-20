@@ -18,4 +18,6 @@ export class LandingPageComponent implements OnInit {
     var coord = carousel.getBoundingClientRect();
     window.scrollTo({left: coord.x, top : (coord.y + 380),  behavior: 'smooth'});
   }
+
+  
 }
