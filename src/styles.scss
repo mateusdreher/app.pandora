@@ -1,6 +1,9 @@
 body {
-   background: #87CEEB !important;
+   background: url('./assets/images/fundo.png');
+   // background: #87CEEB !important;
+   font-family: 'Patrick Hand', cursive !important;
 }
+
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';

@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ButtonConfirmComponent implements OnInit {
 
   @Input() text: string = '';
-  
+  @Input() type: string = 'button';
   constructor() { }
 
   ngOnInit(): void {

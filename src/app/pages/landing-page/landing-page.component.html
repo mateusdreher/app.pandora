@@ -1,8 +1,8 @@
 <header>
    <app-image 
       src='../../../assets/images/header.png'
-      width='335px'
-      height='150px'
+      width='100px'
+      height='50px'
    ></app-image>
 </header>
 
@@ -10,8 +10,8 @@
 
 <app-image 
    src='../../../assets/images/landing-page/landing.png'
-   width='750px'
-   height='500px'
+   width='600px'
+   height='400px'
 ></app-image>
 
 <div class="arrow-click">
@@ -25,20 +25,34 @@
       <div class="picsum-img-wrapper">
          <img class="carousel-img" src="../../../assets/images/landing-page/tutorial-step1.png" >
       </div>
-      <div class="carousel-caption">
-         <h3>First slide label</h3>
-         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </div>
    </ng-template>
 
    <ng-template ngbSlide>
       <div class="picsum-img-wrapper">
          <img class="carousel-img" src="../../../assets/images/landing-page/tutorial-step2.png" >
       </div>
-      <div class="carousel-caption">
-         <h3>Second slide label</h3>
-         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+   </ng-template>
+
+   <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+         <img class="carousel-img" src="../../../assets/images/landing-page/tutorial-step3.png" >
+      </div>
+   </ng-template>
+
+   <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+         <img class="carousel-img" src="../../../assets/images/landing-page/tutorial-step4.png" >
+      </div>
+   </ng-template>
+
+   <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+         <img class="carousel-img" src="../../../assets/images/landing-page/tutorial-step5.png" >
       </div>
    </ng-template>
 
 </ngb-carousel>
+
+<div class="button-next">
+   <app-button-confirm text="Selecionar Número" [routerLink]="['/number']"></app-button-confirm>
+</div>
