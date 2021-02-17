@@ -47,3 +47,9 @@ h2 {
       height: 15%;
    }
 }
+
+@media (min-width: 320px) and (max-width: 1024px) {
+   .gl, .container-gl {
+      width: 100%;
+   }
+}

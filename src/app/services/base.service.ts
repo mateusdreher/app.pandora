@@ -8,7 +8,7 @@ import { throwError } from 'rxjs';
 })
 export abstract class BaseService {
 
-  protected url = `${environment.api.uri}:${environment.api.port}`;
+  protected url = `${environment.api.uri}`;
 
   constructor() { }
 

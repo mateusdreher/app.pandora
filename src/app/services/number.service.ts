@@ -1,3 +1,4 @@
+import { SelectedNumbersDto } from './../dtos/slected-numbers.dto';
 import { INumberRegister } from './../interfaces/number-register.interface';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -16,7 +17,7 @@ export class NumberService extends BaseService {
     super();
   }
 
-  getAlreadyTakenNumbers(): Observable<any> {
+  getAlreadyTakenNumbers(): Observable<SelectedNumbersDto[]> {
     return this.http.get(`${this.url}/number`)
       .pipe(
         map(this.extractData),

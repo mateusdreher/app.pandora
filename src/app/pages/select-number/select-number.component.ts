@@ -1,3 +1,4 @@
+import { SelectedNumbersDto } from './../../dtos/slected-numbers.dto';
 import { INumberRegister } from './../../interfaces/number-register.interface';
 import { NumberService } from './../../services/number.service';
 import { Component, OnInit } from '@angular/core';
@@ -21,6 +22,7 @@ export class SelectNumberComponent implements OnInit {
   inputNameHasFocus: boolean = false;
   inputGiftHasFocus: boolean = false;
   showModal: boolean = true;
+  showLoader: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -77,6 +79,8 @@ export class SelectNumberComponent implements OnInit {
     this.numberToRegister.people_name = this.formSelectNumber.controls.name.value;
     this.numberToRegister.chosen_number = this.formSelectNumber.controls.number.value;
 
+    this.showLoader = true;
+
     this.numberService.selectNumber(this.numberToRegister).subscribe(
       result => {
         this.showSuccess('Número registrado com sucesso. Boa Sorte!');
@@ -98,9 +102,9 @@ export class SelectNumberComponent implements OnInit {
     }
   }
 
-  numberToShow(result: Array<number>) {
+  numberToShow(result: Array<SelectedNumbersDto>) {
     let alreadyExists: boolean;
-
+    console.log(result);
     result = result.sort();
     
     for (let i = 0; i < 200; i++) {
@@ -110,8 +114,8 @@ export class SelectNumberComponent implements OnInit {
         return;
       }
 
-      result.forEach((item) => {
-        if (i === item) {
+      result.forEach((item, index) => {
+        if (i === item.chosen_number) {
           alreadyExists = true;
           return;
         }
@@ -157,14 +161,14 @@ export class SelectNumberComponent implements OnInit {
 
 
   showError(error: any) {
-    this.toastService.error((error.message || 'Unexpected Error'), 'Error', {
+    this.toastService.error((error.message || 'Unexpected Error'), 'Erro', {
       progressBar: true,
       progressAnimation: 'decreasing'
     })
   }
 
   showSuccess(message: string) {
-    this.toastService.success(message, 'Success', {
+    this.toastService.success(message, 'Sucesso', {
       progressBar: true,
       progressAnimation: 'decreasing'
     });

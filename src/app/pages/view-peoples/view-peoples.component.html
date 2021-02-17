@@ -1,0 +1,17 @@
+<table class="table table-striped" *ngIf="ready">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Número</th>
+        <th scope="col">Presente</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let people of peoples">
+        <td>{{people.people_name | titlecase}}</td>
+        <td>{{people.chosen_number}}</td>
+        <td>{{people.gift}}</td>
+      </tr>
+    </tbody>
+  </table>

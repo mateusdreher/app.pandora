@@ -11,9 +11,10 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GoodLuckComponent } from './good-luck/good-luck.component';
+import { ViewPeoplesComponent } from './view-peoples/view-peoples.component';
 
 @NgModule({
-  declarations: [LandingPageComponent, SelectNumberComponent, ViewNumbersComponent, GoodLuckComponent],
+  declarations: [LandingPageComponent, SelectNumberComponent, ViewNumbersComponent, GoodLuckComponent, ViewPeoplesComponent],
   imports: [
     CommonModule,
     ComponentsModule,
