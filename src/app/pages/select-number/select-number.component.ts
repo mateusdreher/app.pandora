@@ -1,3 +1,4 @@
+import { SelectedNumbersDto } from './../../dtos/slected-numbers.dto';
 import { INumberRegister } from './../../interfaces/number-register.interface';
 import { NumberService } from './../../services/number.service';
 import { Component, OnInit } from '@angular/core';
@@ -101,9 +102,9 @@ export class SelectNumberComponent implements OnInit {
     }
   }
 
-  numberToShow(result: Array<number>) {
+  numberToShow(result: Array<SelectedNumbersDto>) {
     let alreadyExists: boolean;
-
+    console.log(result);
     result = result.sort();
     
     for (let i = 0; i < 200; i++) {
@@ -113,8 +114,8 @@ export class SelectNumberComponent implements OnInit {
         return;
       }
 
-      result.forEach((item) => {
-        if (i === item) {
+      result.forEach((item, index) => {
+        if (i === item.chosen_number) {
           alreadyExists = true;
           return;
         }

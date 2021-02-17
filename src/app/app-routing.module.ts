@@ -1,3 +1,4 @@
+import { ViewPeoplesComponent } from './pages/view-peoples/view-peoples.component';
 import { GoodLuckComponent } from './pages/good-luck/good-luck.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ViewNumbersComponent } from './pages/view-numbers/view-numbers.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'number', component: SelectNumberComponent },
   { path: 'view-number', component: ViewNumbersComponent },
   { path: 'good-luck', component: GoodLuckComponent },
+  { path: 'peoples', component: ViewPeoplesComponent },
   { path: '**', component: NotFoundComponent }
 ];
 
